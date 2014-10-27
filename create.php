@@ -1,31 +1,29 @@
 <?php
 	session_start();
 ?>
-<?php include 'template-parts/header.php' /** calling of header(to make it uniform in all template file) **/?>
+<?php include 'template-parts/header.php' ?>
 	<div class="container home">
 		<h3> Crear Nuevo Cliente </h3>
 		
 		<?php
-			include 'connection.php'; /** calling of connection.php that has the connection code **/
+			include 'connection.php'; 
 			
-			if( isset( $_POST['create'] ) ): /** A trigger that execute after clicking the submit 	button **/
-				
-				/*** Putting all the data from text into variables **/
-				
+			if( isset( $_POST['create'] ) ): 
+
 				$fname = $_POST['fname']; 
-				$ndoc = $_POST['ndoc'];
 				$lname = $_POST['lname'];
+				$ndoc = $_POST['ndoc'];
 				$addr = $_POST['addr'];
-				// $gender = $_POST['gender'];
-				// $course = $_POST['course'];
-				// $year = $_POST['year'];
-				// $section = $_POST['section'];
+				$phone = $_POST['phone'];
+				$city = $_POST['city'];
+				$dbirth = $_POST['dbirth'];
+				$obs = $_POST['obs'];
 				
-				mysql_query("INSERT INTO clientes(Nombres,Apellidos,NroDocumento,Direccion) 
-							VALUES('$fname','$lname','$ndoc','$addr')") 
-							or die(mysql_error()); /*** execute the insert sql code **/
+				mysql_query("INSERT INTO clientes(Nombres,Apellidos,NroDocumento,Direccion,TelefonoParticular,Ciudad,FechaNacimiento,Observacion) 
+							VALUES('$fname','$lname','$ndoc','$addr','$phone','$city','$dbirth','$obs')") 
+							or die(mysql_error()); 
 							
-				echo "<div class='alert alert-info'> Successfully Saved. </div>"; /** success message **/
+				echo "<div class='alert alert-info'> Successfully Saved. </div>"; 
 			
 			endif;
 		?>
@@ -34,14 +32,32 @@
 		<form action="" method="POST">
 			<label> Nombre y Apellido: </label>
 				<input type="text" placeholder="Nombre" class="input-medium" name="fname" />
-				<!-- <input type="text" placeholder="Middle Name" class="input-medium" name="mname" /> -->
+				
 				<input type="text" placeholder="Apellido" class="input-medium" name="lname"/>
+
+			<label> Nro Documento: </label>
+				<input type="text" placeholder="Nro Documento" class="input-medium" name="ndoc" />
+
 			<label> Direccion: </label>
 				<textarea class="span7" name="addr"></textarea>
 			
-			<label> Nro Documento: </label>
-				<input type="text" placeholder="Nro Documento" class="input-xxlarge" name="ndoc" />
 			
+			<label> Telefono Particular: </label>
+				<input type="text" placeholder="Telefono" class="input-medium" name="phone" />
+
+			<label> Ciudad: </label>
+				<input type="text" placeholder="Ciudad" class="input-medium" name="city" />
+
+
+			<label>Fecha de Nacimiento</label>
+			<input type="date" name="dbirth" value="">
+
+
+			<label> Observacion: </label>
+				
+				<textarea class="span7" name="obs"></textarea>
+
+
 			<input type="submit" name="create" value="Guardar" class="btn btn-info" />	
 			
 		</form>		

@@ -28,7 +28,7 @@
 					<ul class="nav">		
 					<li><a href="index.php">Home</a></li>	
 						<li class="divider-vertical"></li>
-					<li><a href="SIS/create.php">Crear</a></li>	
+					<li><a href="clients.php">Clientes</a></li>	
 						<li class="divider-vertical"></li>
 					<li><a href="read.php">Read</a></li>	
 						<li class="divider-vertical"></li>

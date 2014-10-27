@@ -3,13 +3,17 @@
 <title> SGTC </title>
 <link rel="stylesheet" href="css/bootstrap.min.css" />
 <link rel="stylesheet" href="css/bootstrap-responsive.min.css" />
+<link rel="stylesheet" href="css/main.css" />
+<link rel="stylesheet" href="css/normalize.css" />
+
+
 
 
 <style type="text/css">
 #wrapper {
 	margin: 0 auto;
 	float: none;
-	width:70%;
+	width:80%;
 }
 .header {
 	padding:10px 0;
@@ -28,6 +32,9 @@
 <body>
 <div id="wrapper">
 	<div class="header">
+		<figure>
+			<!-- <img src="img/logo.png"> -->
+		</figure>
 		<h3 class="title"> SGTC </h3>
 	</br>
 		

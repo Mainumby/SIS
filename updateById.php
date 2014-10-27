@@ -1,18 +1,17 @@
 <?php
 	session_start();
 ?>
-<?php include 'template-parts/header.php' /** calling of header(to make it uniform in all template file) **/?>
+<?php include 'template-parts/header.php' ?>
 	<div class="container home">
 		<h3> Actualizar </h3>
 		
 		<?php
-			include 'connection.php'; /** calling of connection.php that has the connection code **/
+			include 'connection.php'; 
+			$ID = $_GET['id']; 
 			
-			$ID = $_GET['id']; /** get the student ID **/
-			//echo "$ID";
-			if( isset( $_POST['update'] ) ): /** A trigger that execute after clicking the submit 	button **/
+			if( isset( $_POST['update'] ) ):
 				
-				/*** Putting all the data from text into variables **/
+				
 				
 				$fname = $_POST['fname']; 
 				$lname = $_POST['lname'];
@@ -25,14 +24,11 @@
 				
 
 
-				// $gender = $_POST['gender'];
-				// $course = $_POST['course'];
-				// $year = $_POST['year'];
-				// $section = $_POST['section'];
+				
 				
 				mysql_query("UPDATE clientes SET Nombres = '$fname', Apellidos = '$lname',NroDocumento = '$ndoc', Direccion = '$addr' ,TelefonoParticular='$phone', Ciudad='$city', FechaNacimiento='$dbirth',Observacion='$obs'
 					WHERE IdCliente = '$ID'") 
-							or die(mysql_error()); /*** execute the insert sql code **/
+							or die(mysql_error()); 
 							
 				echo "<div class='alert alert-info'> Successfully Updated. </div>"; /** success message **/
 			
@@ -65,7 +61,8 @@
 			<input type="text" value="<?php echo $data->Ciudad ?>" class="input-medium" name="city"></input>
 
 			<label>Fecha de Nacimiento</label>
-			<input type="text" value="<?php echo $data->FechaNacimiento ?>" class="input-medium" name="dbirth"></input>
+			<input type="date" name="dbirth" value="<?php echo $data->FechaNacimiento ?>" >
+			<!-- <input type="text" value="<?php echo $data->FechaNacimiento ?>" class="input-medium" name="dbirth"></input> -->
 
 			<label>Observacion</label>
 			<input type="text" value="<?php echo $data->Observacion ?>" class="input-xxlarge" name="obs"></input>

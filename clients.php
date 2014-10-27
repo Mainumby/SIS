@@ -1,6 +1,12 @@
  <?php
 	session_start();
+
+if (!@$_SESSION['loggedin']) {
+	header("Location: main_login.php");
+}
+
 ?>
+
 <!DOCTYPE html>
 <?php include 'template-parts/header.php' /** calling of header(to make it uniform in all template file) **/?>	
 
@@ -12,6 +18,10 @@
 	<head>Clientes</head>
 	
 		<?php include 'connection.php' ?>
+
+		<p>
+			<a href="create.php" class="btn btn-primary btn-lg active" role="button">Nuevo Cliente</a>
+		</p>
 
 
 		<table class="table table-bordered">
@@ -46,7 +56,7 @@
 					<button class="btn btn-info" >Editar</button> -->
 
 					<a href="updatebyId.php?id=<?php echo $data->IdCliente ?>">
-						<button class="btn btn-info"> Editar </button>
+						<button class="btn btn-info edit"> Editar </button>
 					</a>
 
 
