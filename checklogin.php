@@ -48,8 +48,9 @@ if($count == 1){
  $_SESSION['start'] = time();
  $_SESSION['expire'] = $_SESSION['start'] + (5 * 60) ;
 
-echo "<br> Bienvenido! " . $_SESSION['username'];
-echo "<a href='index.php'>Home</a>";
+// echo "<br> Bienvenido! " . $_SESSION['username'];
+// echo "<a href='index.php'>Home</a>";
+ header("Location: clients.php");
 
 
 }
@@ -59,7 +60,19 @@ echo "<a href='index.php'>Home</a>";
  echo "<a href='main_login.php'>Volver a Intentarlo</a>";
 }
 
+
+/*LOGOUT*/
+if ($_GET['logout']=="yes") {
+		session_destroy();
+		echo "<meta http-equiv='refresh' content='2; url=main_login.php' />";
+		exit;
+	}
+
 ?>
+
+
+
+
 
 </body>
 </html>

@@ -14,6 +14,8 @@
 	</head>
 
 	<body>
+		<div class="wrapper">
+
 		
 		<h1>Login</h1>
 
@@ -27,13 +29,13 @@
 			<input name="password" type="password" id="password">
 			<br><br>
 			<input class="btn btn-primary btn-large" type="submit" name="Submit" value="Entrar">
-
+			
 		</form>
 
 		
 		<footer>
 			
 		</footer>
-
+		</div>
 	</body>
 </html>

@@ -41,7 +41,7 @@
 <hr />
 
 <footer>
-    &copy;2013 VelozityWeb.com
+  
 </footer>	
 
     </body>

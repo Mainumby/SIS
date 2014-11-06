@@ -1,3 +1,17 @@
+<?php
+// echo "<br> Bienvenido! " . $_SESSION['username'];
+	
+	if (!@$_SESSION['loggedin']) {
+		# code...
+		$user="";
+	} else {
+		# code...
+		
+		$user=$_SESSION['username'];
+	}
+	
+	
+?>
 <html>
 <head>
 <title> SGTC </title>
@@ -9,34 +23,27 @@
 
 
 
-<style type="text/css">
-#wrapper {
-	margin: 0 auto;
-	float: none;
-	width:80%;
-}
-.header {
-	padding:10px 0;
-	border-bottom:1px solid #CCC;
-}
-.title {
-	padding: 0 5px 0 0;
-	float:left;
-	margin:0;
-}
-.container form input {
-	height: 30px;
-}
+
 </style>
 </head>
 <body>
-<div id="wrapper">
-	<div class="header">
-		<figure>
-			<!-- <img src="img/logo.png"> -->
+<header class="wrapper">
+	
+		<figure id="logo">
+			<img src="img/logo.png"> 
 		</figure>
-		<h3 class="title"> SGTC </h3>
-	</br>
-		
-		<?php include 'template-parts/menu.php' ?>	
-	</div>
+		<h1 class="title"> SGTC </h1>
+	
+		<figure id="avatar">
+			<img src="img/avatar.png">
+			<br>		
+			<a href="checklogin.php?logout=yes" class="input-mini" >logout <?= $user ?></a>	
+		</figure>
+
+
+	
+	
+</header>
+<nav class="wrapper">
+	<?php include 'template-parts/menu.php' ?>
+</nav>

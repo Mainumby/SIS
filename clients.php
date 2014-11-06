@@ -14,7 +14,8 @@ if (!@$_SESSION['loggedin']) {
 <head>
 	<title>Clientes</title>
 </head>
-<body>
+<body >
+	<div class="wrapper">
 	<head>Clientes</head>
 	
 		<?php include 'connection.php' ?>
@@ -79,6 +80,6 @@ if (!@$_SESSION['loggedin']) {
 		<div>
 
 		</div>
-
+	</div>
 </body>
 </html>

@@ -1,3 +1,62 @@
+header figure{
+	float: left;
+}
+
+header h1{
+
+}
+
+header #avatar{
+	margin: 0.5em 0.5em 0 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+header #avatar img{
+	border-radius: 50%;
+	width: 55px;
+	border: 1px solid red;/* ROJO DE PRUEBA*/
+}
+
+header #logo{
+	border-right: 1px solid red; /*ROJO DE PRUEBA*/
+	margin-right: 1em;
+}
+
+header #logo img{
+	padding-right: 0.5em;
+	margin-right: .5em;
+	width: 52px;
+	-webkit-transition:0.5s;
+}
+
+header #logo img:hover{
+	-webkit-transform:rotate(360deg);
+}
+
 .edit{
 	margin-bottom: 8px;
+}
+
+.wrapper {
+	margin: 0 auto;
+	float: none;
+	width:80%;
+}
+header {
+	padding:10px 0;
+	border-bottom:1px solid #CCC;
+	overflow: hidden;
+	/*margin: 1em;
+	padding: 0.5em;*/
+	position: relative;
+}
+.title {
+	padding: 0 5px 0 0;
+	float:left;
+	margin:0;
+}
+.container form input {
+	height: 30px;
 }

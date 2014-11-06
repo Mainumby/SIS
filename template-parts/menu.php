@@ -30,11 +30,10 @@
 						<li class="divider-vertical"></li>
 					<li><a href="clients.php">Clientes</a></li>	
 						<li class="divider-vertical"></li>
-					<li><a href="read.php">Read</a></li>	
-						<li class="divider-vertical"></li>
-					<li><a href="update.php">Update</a></li>
-						<li class="divider-vertical"></li>
-					<li><a href="delete.php">Delete</a></li>
+					<li><a href="register.php">Registrar</a></li>
+
+
+					
 
 					<!-- <li class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown">Menu Desplegable
