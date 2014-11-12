@@ -1,7 +1,9 @@
 <?php
     session_start();
 ?>
+
 <!DOCTYPE html>
+<?php include 'template-parts/header.php' /** calling of header(to make it uniform in all template file) **/?>  
 
 <html lang="en">
 
@@ -13,14 +15,14 @@
 </head>
 
 <body>
-
+<div class="wrapper">
 	<header>
 		<h1>Registrarme:</h1>
   	</header>   
 	
     <form action="registrar-usuario.php" method="post" name="procesar-usuario" enctype="multipart/form-data">   
  
-  	<hr/>
+  	
  	<h3>Crea un Nombre de Usuario y Clave para tener acceso a Contenido Exclusivo!</h3>
   
   	<!--Nombre Usuario-->	
@@ -38,7 +40,7 @@
     
     </form>
 
-<hr />
+</div>
 
 <footer>
   

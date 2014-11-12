@@ -20,7 +20,7 @@
 	 if ($count == 1){
 	 echo "<br />". "El Nombre de Usuario ya Existe en nuestra Base de Datos!" . "<br />";
 	  
-	echo "<a href='registro.html'>Escoger otro Nombre de Usuario</a>";
+	echo "<a href='register.php'>Escoger otro Nombre de Usuario</a>";
 	  
 	exit;
 	 }
